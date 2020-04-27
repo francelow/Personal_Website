@@ -212,7 +212,7 @@
 .about-me .about-content .text{
   /*background-color: blue;*/
   /*flex: 0 0 100%;*/
-  padding: 5% 9%;
+  padding: 0 9%;
   float: right;
   max-width: 50%;
   height: 100%;
@@ -220,7 +220,7 @@
 }
 
 #intro{
-  padding: 5% 10% 5% 0;
+  padding: 0% 10% 5% 0;
 }
 
 
@@ -248,8 +248,98 @@ h4{
   max-width: 100%;
 }
 
-.display-pic{
-  width: 250px;
-  height: 250px;
-  float: left;
+.education{
+  position: relative;
+  padding: 50px 0 100px;
 }
+
+.education-section{
+
+}
+
+.edu-heading{
+  color: black;
+  font-size: 2.6rem;
+  text-align: center;
+  font-family: 'Nunito';
+  letter-spacing: .0625em;
+  text-decoration: underline;
+  text-decoration-color: yellow;
+  padding-bottom: 50px;
+
+}
+
+.edu-description{
+  color: black;
+  font-size: 1.7rem;
+  text-align: left;
+  padding: 10px 20px 10px 20px;
+  line-height: 1.7;
+}
+
+.edu-img{
+  padding: 0;
+}
+
+.skills{
+  position: relative;
+  min-height: 100vh;
+  text-align: center;
+
+}
+
+.skills-heading{
+  color: black;
+  font-size: 2.6rem;
+  text-align: center;
+  font-family: 'Nunito';
+  letter-spacing: .0625em;
+  text-decoration: underline;
+  text-decoration-color: yellow;
+  padding-bottom: 30px;
+}
+
+
+.skills-section1{
+  background-color: #ececec;
+  text-align: center;
+
+
+}
+
+h3{
+  font-weight: bold;
+}
+
+.skills-section2{
+  background-color: #d7d7d7;
+  text-align: center;
+
+}
+
+.item-title{
+  color: black;
+  font-family: 'Nunito';
+}
+
+.skill-text{
+  font-size: 1.1rem;
+  font-family: 'Nunito';
+}
+
+.skill-title{
+  font-weight: bold;
+  line-height: 2;
+
+
+}
+/*
+.main{
+  position: relative;
+  background:url(images/nebula.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 220px 0  200px
+
+}*/
