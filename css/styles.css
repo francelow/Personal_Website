@@ -277,9 +277,6 @@ h4{
   line-height: 1.7;
 }
 
-.edu-img{
-  padding: 0;
-}
 
 .skills{
   position: relative;
@@ -294,10 +291,11 @@ h4{
   text-align: center;
   font-family: 'Nunito';
   letter-spacing: .0625em;
+  padding-bottom: 30px;
   text-decoration: underline;
   text-decoration-color: yellow;
-  padding-bottom: 30px;
 }
+
 
 
 .skills-section1{
@@ -316,19 +314,36 @@ h3{
   text-align: center;
 
 }
-
-.item-title{
-  color: black;
+.item-title1{
+  color:#252525;
   font-family: 'Nunito';
+
 }
 
-.skill-text{
-  font-size: 1.1rem;
+
+.item-title2{
+  color: #666565;
   font-family: 'Nunito';
+
 }
+
+.skill-text1{
+  font-size: 1rem;
+  font-family: 'Nunito';
+  line-height: 1.5;
+  color: #373737;
+}
+
+.skill-text2{
+  font-size: 1rem;
+  font-family: 'Nunito';
+  line-height: 1.5;
+  color: #666565;
+}
+
+
 
 .skill-title{
-  font-weight: bold;
   line-height: 2;
 
 
