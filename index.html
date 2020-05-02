@@ -10,8 +10,7 @@
 
 
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-
-
+  <script src="https://kit.fontawesome.com/9e16d28e34.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -194,17 +193,140 @@
     </div>
   </section>
 
-</body>
-<br>
+  <!--Projects -->
+  <section id="projects" class="projects">
+    <h5 class="project-subtitle">PORTFOLIO OVERVIEW</h5>
+    <h1 class="projects-heading">Projects</h1>
+    <div class="container">
+      <div class="tabs">
+        <div class="tabs_sidebar">
+          <button class="tabs_button" data-for-tab="1">Receipt reader</button>
+          <button class="tabs_button" data-for-tab="2">Ricochet Robots boardgame</button>
+          <button class="tabs_button" data-for-tab="3">Personal website</button>
+        </div>
+        <div class="tabs_content" data-tab="1">
+          <p class="project-text">Image processing of paper receipts using OpenCV and Tesseract-OCR to parse paper receipts and output receipt
+            contents into a text document. <br>(November 2019 – December 2019)
+          </p>
+        </div>
 
-<!--Projects -->
-<section id="projects" class="projects">
-  <h1 class="projects-heading">Projects</h1>
-  <div class="container">
-    <div class="row">
+        <div class="tabs_content" data-tab="2">
+          <p class="project-text">Worked in a team on a multi-stage Java-based project to create a boardgame.
+            Process involving UML software design, project management, Code Maintenance and Testing
+            <br>(January 2020 – April 2020)
+          </p>
+        </div>
 
+        <div class="tabs_content" data-tab="3">
+          <p class="project-text">Built a responsive personal website using HTML, CSS, Javascript and Bootstrap framework.
+            <br>(January 2020 – May 2020)</p>
+        </div>
+
+
+      </div>
+
+      <script>
+        function setupTabs() {
+          document.querySelectorAll(".tabs_button").forEach(button => {
+            button.addEventListener("click", () => {
+              const sideBar = button.parentElement;
+              const tabsContainer = sideBar.parentElement;
+              const tabNumber = button.dataset.forTab;
+              const tabToActivate = tabsContainer.querySelector(`.tabs_content[data-tab="${tabNumber}"]`);
+
+              sideBar.querySelectorAll(".tabs_button").forEach(button => {
+                button.classList.remove("tabs_button--active");
+              });
+
+              tabsContainer.querySelectorAll(".tabs_content").forEach(tab => {
+                tab.classList.remove("tabs_content--active");
+              });
+              button.classList.add("tabs_button--active")
+              tabToActivate.classList.add("tabs_content--active")
+            });
+          });
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+          setupTabs();
+
+          document.querySelectorAll(".tabs").forEach(tabsContainer => {
+            tabsContainer.querySelector(".tabs_sidebar .tabs_button").click();
+          });
+        });
+      </script>
     </div>
-  </div>
-</section>
+    </div>
+  </section>
+
+  <section id="lower-section">
+    <div class="getintouch-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
+            <h1 class="getintouch-text">Let's get in touch!</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <section>
+      <div class="contact-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="contact-details card">
+                <div class="contact-body card-body">
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="col-md-4">
+              <div class="contact-details card">
+                <div class="contact-body card-body">
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="col-md-4">
+              <div class="contact-details card">
+                <div class="contact-body card-body">
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="copyright-section">
+      <div class="social-section">
+        <a class="social-icon" href="#"><i class="fab fa-github"></i></a>
+        <a class="social-icon" href="#"><i class="fab fa-linkedin"></i></a>
+        <a class="social-icon" href="#"><i class="fab fa-instagram"></i></a>
+
+      </div>
+      <div class="container">Copyright @ Francois Low's website 2020</div>
+
+    </footer>
+
+  </section>
+</body>
 
 </html>
