@@ -56,7 +56,7 @@
             <a class="nav-link" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#lower-section">Contact</a>
           </li>
         </ul>
       </div>
@@ -71,7 +71,7 @@
       <div class="row">
         <div class="col-sm-6">
           <h2 id="welcome">WELCOME. I AM</h2>
-          <h2 id="name">FRANCOIS LOW.</h2>
+          <h2 id="intro-name">FRANCOIS LOW.</h2>
           <h2 id="tagline">Aspiring software engineer.</h2>
           <p>A personable, communicative developer with interests in software development and computer vision.</p>
           <a href="My_Resume.pdf" type="button" target="_blank" class="btn btn-primary btn-lg">Download CV</a>
@@ -269,26 +269,84 @@
       </div>
     </div>
 
+    <script>
+      $(document).ready(function() {
+        // Test for placeholder support
+        $.support.placeholder = (function() {
+          var i = document.createElement('input');
+          return 'placeholder' in i;
+        })();
 
-    <section>
-      <div class="contact-section">
-        <div class="container">
-          <div class="row">
-            <form>
-              <input type="text" placeholder="Name">
-              <input type="text" placeholder="Email">
-              <input type="text" placeholder="Subject">
-              <input id="msg" type="text" placeholder="Message">
-            </form>
+        // Hide labels by default if placeholders are supported
+        if ($.support.placeholder) {
+          $('.form-label').each(function() {
+            $(this).addClass('js-hide-label');
+          });
 
+          // Code for adding/removing classes here
+          $('.form-group').find('input, textarea').on('keyup blur focus', function(e) {
+
+            // Cache our selectors
+            var $this = $(this),
+              $label = $this.parent().find("label");
+
+            switch (e.type) {
+              case 'keyup': {
+                $label.toggleClass('js-hide-label', $this.val() == '');
+              }
+              break;
+            case 'blur': {
+              if ($this.val() == '') {
+                $label.addClass('js-hide-label');
+              } else {
+                $label.removeClass('js-hide-label').addClass('js-unhighlight-label');
+              }
+            }
+            break;
+            case 'focus': {
+              if ($this.val() !== '') {
+                $label.removeClass('js-unhighlight-label');
+              }
+            }
+            break;
+            default:
+              break;
+            }
+
+          });
+        }
+      });
+    </script>
+
+    <div class="id = container">
+
+      <div class="contact-box">
+        <form id="contact-form" class="form" action="mailto:francelow@hotmail.com" method="POST" role="form">
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Your name" tabindex="1" required>
           </div>
-          <button class="contact-button" type="button">Let's Talk</button>
-        </div>
-
+          <div class="form-group">
+            <label class="form-label" for="email">Your Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" tabindex="2" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="subject">Subject</label>
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" tabindex="3">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea rows="5" cols="50" name="message" class="form-control" id="message" placeholder="Message..." tabindex="4" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-start-order">Let's Talk</button>
+          </div>
+        </form>
       </div>
 
+    </div>
 
-    </section>
+
 
 
     <!-- Footer -->
