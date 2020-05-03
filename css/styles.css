@@ -88,7 +88,7 @@
   color: #B0B0B0;
 }
 
-#name{
+#intro-name{
   font-size: 2.5em;
 }
 #tagline{
@@ -436,24 +436,7 @@ h3{
   line-height: 1.2;
   font-family: 'Nunito';
 }
-.contact-section{
 
-}
-.contact-details{
-  border-bottom: .25rem solid #6610f2;
-  padding-top: 1.5rem !important;
-  padding-bottom: 1.5rem !important;
-  height: 100% !important;
-}
-.contact-body{
-  font-family: 'Nunito';
-  letter-spacing: 0.0625rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  text-align: center;
-}
 /* #6610f2 */
 
 .social-section{
@@ -477,46 +460,58 @@ h3{
   letter-spacing: 0.0625rem;
 }
 
+
+
+/* Message box */
+
 #lower-section{
   background: rgb(2,0,25);
   background: linear-gradient(0deg, rgba(2,0,25,1) 0%, rgba(0,0,16,1) 27%, rgba(0,0,0,1) 100%);
 }
 
-/* Message box */
 
-.contact-section{
-  text-align: center;
+textarea {
+	resize: none;
 }
-form{
-  position: relative;
-  left: 10%;
-  transform: translate(-50%. -50%);
+.form-label {
+	font-size: 12px;
+	color: #5e9bfc;
+	margin: 0;
+	display: block;
+	opacity: 1;
+	-webkit-transition: .333s ease top, .333s ease opacity;
+	transition: .333s ease top, .333s ease opacity;
 }
-input{
-  width: 100%;
-  margin: 20px;
-  border: none;
-  background-color: rgba(0, 0, 0, 0);
-  border-bottom: 1px solid gray;
-  color: white;
+.form-control {
+	border-radius: 0;
+	border-color: #ccc;
+   	border-width: 0 0 2px 0;
+   	border-style: none none solid none;
+   	box-shadow: none;
+}
+.form-control:focus {
+	box-shadow: none;
+	border-color: #5e9bfc;
+}
+.js-hide-label {
+	opacity: 0;
+}
+.js-unhighlight-label {
+	color: #999
 }
 
-::-webkit-input-placeholder{
-  color: #EAEAEA;
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-#msg{
-  margin-top: 60px;
-}
-.contact-button{
+.btn-start-order{
   padding: 10px 19px;
-  font-size: 16px;
-  background:  #6610f2;
+  font-size: 1rem;
+  background: #6610f2;
   border: none;
   border-radius: 4px;
   margin-top: 30px;
   color: #fff;
 }
-.contact-button:hover{
-  background: #563d7c;
+.btn-start-order:hover,.btn-start-order:active, .btn-start-order:focus {
+  background-color: #563d7c;
+}
+.contact-box{
+  padding: 0 25%;
+}
